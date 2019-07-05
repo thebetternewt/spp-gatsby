@@ -98,8 +98,7 @@ export default () => {
   useEffect(() => {
     const rotateTestimonial = setTimeout(() => {
       setTestimonialRef.current(nextTestimonial());
-      console.log("hey");
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(rotateTestimonial);
   }, [testimonial]);
