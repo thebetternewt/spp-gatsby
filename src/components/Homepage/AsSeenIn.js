@@ -38,10 +38,14 @@ const AsSeenIn = styled.section`
       justify-content: space-around;
       z-index: 4;
 
-      img {
-        opacity: 0.8;
+      .logo-wrapper {
         width: 180px;
-        filter: opacity(0.8) drop-shadow(0 0 0 #333);
+
+        img {
+          opacity: 0.8;
+          /* width: 180px; */
+          filter: opacity(0.8) drop-shadow(0 0 0 #333);
+        }
       }
     }
   }
@@ -53,7 +57,9 @@ export default () => (
     <div className="content">
       <h2>As Seen In</h2>
       <div className="logos">
-        <img src={msMag} alt="Mississippi Magazine" />
+        <div className="logo-wrapper">
+          <img src={msMag} alt="Mississippi Magazine" />
+        </div>
       </div>
     </div>
   </AsSeenIn>
