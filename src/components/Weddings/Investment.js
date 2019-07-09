@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { useStaticQuery } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 const Investment = styled.section`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3rem 10px;
@@ -31,6 +32,27 @@ const Investment = styled.section`
       letter-spacing: 0.1ch;
     }
   }
+
+  .img-wrapper {
+    width: 800px;
+    max-width: 90%;
+    margin: 2rem 0;
+  }
+
+  .pricing-text {
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1ch;
+    margin-top: 1.5rem;
+  }
+
+  .includes-text {
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1ch;
+  }
 `;
 
 export default () => {
@@ -51,11 +73,15 @@ export default () => {
       <h2>
         <span>The Wedding</span>Investment
       </h2>
-      <Img
-        fluid={data.sunset.childImageSharp.fluid}
-        alt="Couple kissing in sunset"
-        className="investment-img"
-      />
+      <div className="img-wrapper">
+        <Img
+          fluid={data.sunset.childImageSharp.fluid}
+          alt="Couple kissing in sunset"
+          className="investment-img"
+        />
+      </div>
+      <p className="pricing-text">Wedding collections begin at $2,600.</p>
+      <p className="includes-text">A SPP experience includes...</p>
     </Investment>
   );
 };

@@ -6,6 +6,10 @@ const FeaturedCardRow = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+  }
 `;
 
 export default FeaturedCardRow;

@@ -6,6 +6,7 @@ import FeatureCard from "../shared/FeatureCard";
 const FeaturedGalleries = styled.section`
   padding: 8rem 0 2rem;
   max-width: 960px;
+  margin: 0 auto;
 
   h2 {
     font-family: "Playfair Display", serif;

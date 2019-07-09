@@ -35,14 +35,15 @@ const Testimonials = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    /* height: 100%; */
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     text-align: center;
-    margin: 2rem auto 0;
+    margin: 0 auto;
     padding: 1rem;
   }
 
@@ -51,7 +52,7 @@ const Testimonials = styled.section`
     text-transform: uppercase;
     font-weight: normal;
     font-size: 1.5rem;
-    margin-bottom: 3rem;
+    margin: 0 0 3rem;
   }
 
   p {
@@ -107,7 +108,7 @@ export default () => {
     <Testimonials>
       {fades.map(({ item, props: fade, key }) => (
         <animated.div style={fade} className="testimonial" key={key}>
-          <h3>{testimonials[item].snippet}</h3>
+          <h3>"{testimonials[item].snippet}"</h3>
           <p>{testimonials[item].full}</p>
         </animated.div>
       ))}
