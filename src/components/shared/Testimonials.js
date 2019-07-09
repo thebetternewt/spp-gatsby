@@ -30,6 +30,7 @@ const Testimonials = styled.section`
   background-color: #f4e7e2;
   height: 400px;
   position: relative;
+  overflow: hidden;
 
   .testimonial {
     display: flex;
