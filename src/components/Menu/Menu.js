@@ -9,9 +9,15 @@ import logo from "../../images/logo.png";
 const Menu = () => {
   const [isOpen, toggleIsOpen] = useState(false);
 
+  const handleClose = e => {
+    if (e.target.href) {
+      toggleIsOpen(false);
+    }
+  };
+
   return (
     <>
-      <MenuWrapper isOpen={isOpen}>
+      <MenuWrapper isOpen={isOpen} onClick={handleClose}>
         <Nav>
           <ul>
             <li>

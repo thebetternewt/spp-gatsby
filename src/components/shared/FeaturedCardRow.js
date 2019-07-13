@@ -6,8 +6,9 @@ const FeaturedCardRow = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 0 10px;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 900px) {
     flex-direction: row;
   }
 `;

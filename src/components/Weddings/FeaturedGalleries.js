@@ -4,8 +4,8 @@ import FeaturedCardRow from "../shared/FeaturedCardRow";
 import FeatureCard from "../shared/FeatureCard";
 
 const FeaturedGalleries = styled.section`
-  padding: 8rem 0 2rem;
-  max-width: 960px;
+  padding: 8rem 10px 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 
   h2 {

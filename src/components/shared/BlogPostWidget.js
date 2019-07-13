@@ -6,6 +6,7 @@ const Wrapper = styled.article`
   width: 100%;
   height: 100px;
   display: flex;
+  justify-content: flex-start;
 
   border-top: 1px solid #eee;
 
@@ -15,6 +16,7 @@ const Wrapper = styled.article`
 `;
 
 const ThumbImageWrapper = styled.div`
+  flex-shrink: 0;
   width: 100px;
   height: 100%;
   overflow: hidden;
@@ -28,6 +30,7 @@ const ThumbImageWrapper = styled.div`
 `;
 
 const ContentWrapper = styled.div`
+  width: calc(100% - 100px);
   flex-grow: 1;
   padding: 1rem 10px;
   display: flex;
@@ -40,6 +43,9 @@ const ContentWrapper = styled.div`
     letter-spacing: 0.1ch;
     font-weight: normal;
     margin: 0 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .date {
@@ -49,6 +55,9 @@ const ContentWrapper = styled.div`
     font-weight: normal;
     font-style: italic;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
@@ -58,7 +67,7 @@ const BlogPostWidget = ({ post, img, alt }) => (
       <img src={img} alt={alt} className="thumb-image" />
     </ThumbImageWrapper>
     <ContentWrapper>
-      <h3 className="title">A Sample Post Title</h3>
+      <h3 className="title">A Sample Post Title gsdafsdffff</h3>
       <p className="date">July 12, 2019</p>
     </ContentWrapper>
   </Wrapper>
