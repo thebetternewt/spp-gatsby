@@ -189,9 +189,17 @@ export default () => (
       </div>
       <div className="copyright">
         <p>Copyright 2019 Sarah Pearson Photography</p>
-        <p>Built by Relate Media & Design</p>
-        <Link to="/weddings">Weddings</Link>
-        <Link to="/">Home</Link>
+        <p>
+          Built by{" "}
+          <a
+            href="https://chriseady.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline" }}
+          >
+            Chris Eady
+          </a>
+        </p>
       </div>
     </div>
   </Footer>

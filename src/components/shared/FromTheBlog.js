@@ -11,7 +11,7 @@ const FromTheBlog = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 10px;
+  padding: 3rem 0;
   position: relative;
 
   color: #777;
@@ -27,10 +27,10 @@ const FromTheBlog = styled.section`
   }
 `;
 
-export default () => {
+export default ({ title = "From the Blog", style }) => {
   return (
-    <FromTheBlog>
-      <h2>From the Blog</h2>
+    <FromTheBlog style={style}>
+      <h2>{title}</h2>
       <BlogPostWidget img={baby} alt="baby" />
       <BlogPostWidget img={sunset} alt="sunset" />
       <BlogPostWidget img={baby} alt="baby" />

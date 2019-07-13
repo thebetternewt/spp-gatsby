@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 
 const Wrapper = styled.article`
-  width: 100vw;
+  width: 100%;
   height: 100px;
   display: flex;
 

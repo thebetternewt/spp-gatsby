@@ -99,6 +99,10 @@ const MenuButton = styled.button`
       width: 40px;
     }
   `}
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 const MenuWrapper = styled.div`
@@ -115,9 +119,17 @@ const MenuWrapper = styled.div`
   opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
   pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
   transition: 300ms all ease-in-out;
+
   @media (min-width: 800px) {
     width: 300px;
     right: ${({ isOpen }) => (isOpen ? 0 : `-50px`)};
+  }
+
+  @media (min-width: 1200px) {
+    opacity: 1;
+    right: 0;
+    box-shadow: -3px 0 12px 2px rgba(184, 184, 184, 0.3);
+    pointer-events: auto;
   }
 `;
 
