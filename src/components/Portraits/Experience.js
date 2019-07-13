@@ -152,15 +152,16 @@ export default () => {
         </div>
         <div className="text-content">
           <h2>
-            <span>The Wedding</span>Experience
+            <span>The Portrait</span>Experience
           </h2>
           <Divider />
           <h4>Let's Chat</h4>
           <p>
-            I was born and raised in Nashville, TN, but I now call Mississippi
-            my home. My hubby and I both speak Spanish, and love doing pretty
-            much everything together--music, home remodeling projects, coffee
-            dates, grocery shopping, etc.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            voluptatibus sequi inventore deserunt fugiat fugit voluptatem
+            cupiditate? Voluptates laudantium eum explicabo quo illo accusamus
+            nemo maxime vitae quos illum fuga molestias nulla ipsa dicta
+            repellat quis cum, necessitatibus nostrum iste.
           </p>
           <button>Next</button>
         </div>

@@ -43,7 +43,7 @@ const AsSeenIn = styled.section`
 
         img {
           opacity: 0.8;
-          /* width: 180px; */
+          width: 100%;
           filter: opacity(0.8) drop-shadow(0 0 0 #333);
         }
       }

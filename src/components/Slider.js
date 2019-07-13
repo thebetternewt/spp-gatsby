@@ -7,7 +7,8 @@ const Slider = styled.div`
   width: 100%;
   height: 425px;
   overflow: hidden;
-  position: relative;
+  display: flex;
+  justify-content: center;
 
   img {
     min-height: 100%;

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { GRAY_TEAL } from "../../ui/colors";
+
 const FeatureCard = styled.div`
   display: flex;
   justify-content: center;
@@ -26,7 +28,7 @@ const FeatureCard = styled.div`
     transform: translate3d(-50%, 50%, 0);
     height: 50px;
     width: 200px;
-    background-color: #a6b3ba;
+    background-color: ${GRAY_TEAL};
     color: #fff;
     display: flex;
     justify-content: center;

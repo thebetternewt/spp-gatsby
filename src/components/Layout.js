@@ -14,6 +14,7 @@ import "./layout.css";
 import GlobalStyle from "./GlobalStyle";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Menu from "./Menu/Menu";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -42,6 +43,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <Footer />
       </div>
+      <Menu />
     </>
   );
 };

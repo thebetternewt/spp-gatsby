@@ -4,21 +4,21 @@ import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import Slider from "../components/Slider";
 import PageLabel from "../components/shared/PageLabel";
-import FeaturedGalleries from "../components/Weddings/FeaturedGalleries";
+import PortraitCategoryLinks from "../components/Portraits/PortraitCategoryLinks";
 import Testimonials from "../components/shared/Testimonials";
-import Experience from "../components/Weddings/Experience";
-import Investment from "../components/Weddings/Investment";
+import Experience from "../components/Portraits/Experience";
+import Investment from "../components/Portraits/Investment";
 import ReadyToBook from "../components/shared/ReadyToBook";
 import FromTheBlog from "../components/shared/FromTheBlog";
 
-const WeddingsPage = () => (
+const PortraitsPage = () => (
   <Layout>
-    <SEO title="Weddings" />
+    <SEO title="Portraits" />
     <div style={{ position: "relative" }}>
       <Slider />
-      <PageLabel lead="Sarah Pearson" title="Weddings" />
+      <PageLabel lead="Sarah Pearson" title="Portraits" />
     </div>
-    <FeaturedGalleries />
+    <PortraitCategoryLinks />
     <Testimonials />
     <Experience />
     <Investment />
@@ -27,4 +27,4 @@ const WeddingsPage = () => (
   </Layout>
 );
 
-export default WeddingsPage;
+export default PortraitsPage;
