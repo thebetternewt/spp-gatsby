@@ -7,6 +7,10 @@ const Post = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  p {
+    font-size: 0.9rem;
+  }
 `;
 
 export default ({ children }) => <Post>{children}</Post>;

@@ -28,6 +28,10 @@ const LatestPost = styled.div`
     margin-bottom: 2em;
   }
 
+  .snippet {
+    font-size: 0.9rem;
+  }
+
   .read-more {
     display: flex;
     margin-left: auto;
