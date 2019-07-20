@@ -5,7 +5,7 @@ import SEO from "../components/Seo";
 import Slider from "../components/Slider";
 import PageLabel from "../components/shared/PageLabel";
 import FromTheBlog from "../components/shared/FromTheBlog";
-import LatestPost from "../components/Blog/LatestPost";
+import FeaturedPost from "../components/shared/FeaturedPost";
 
 const JournalPage = () => (
   <Layout>
@@ -14,7 +14,7 @@ const JournalPage = () => (
       <Slider />
       <PageLabel lead="Sarah Pearson" title="Journal" />
     </div>
-    <LatestPost />
+    <FeaturedPost sectionTitle="Latest Post" />
     <FromTheBlog title="Recent Posts" />
   </Layout>
 );

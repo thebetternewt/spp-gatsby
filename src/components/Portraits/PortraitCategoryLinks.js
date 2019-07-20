@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import FeaturedCardRow from "../shared/FeaturedCardRow";
 import FeatureCard from "../shared/FeatureCard";
@@ -24,9 +25,15 @@ export default () => (
       flies by...but your memories don’t have to.
     </p>
     <FeaturedCardRow>
-      <FeatureCard title="Motherhood" />
-      <FeatureCard title="Families" />
-      <FeatureCard title="Seniors" />
+      <Link to="/portraits/motherhood">
+        <FeatureCard title="Motherhood" />
+      </Link>
+      <Link to="/portraits/families">
+        <FeatureCard title="Families" />
+      </Link>
+      <Link to="/portraits/seniors">
+        <FeatureCard title="Seniors" />
+      </Link>
     </FeaturedCardRow>
   </FeaturedGalleries>
 );

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import FeaturedCardRow from "../shared/FeaturedCardRow";
-import FeatureCard from "../shared/FeatureCard";
+import FeaturedCardRow from "./FeaturedCardRow";
+import FeatureCard from "./FeatureCard";
 import { FaCaretRight } from "react-icons/fa";
 import { Link } from "gatsby";
 
-const LatestPost = styled.div`
+const FeaturedPost = styled.div`
   padding: 8rem 1rem 2rem;
   max-width: 960px;
   margin: 0 auto;
@@ -47,10 +47,10 @@ const LatestPost = styled.div`
   }
 `;
 
-export default () => {
+export default ({ sectionTitle = "Featured Post" }) => {
   return (
-    <LatestPost>
-      <h2>Latest Post</h2>
+    <FeaturedPost>
+      <h2>{sectionTitle}</h2>
       <FeaturedCardRow>
         <FeatureCard title="Post Title" />
       </FeaturedCardRow>
@@ -79,6 +79,6 @@ export default () => {
       <Link to="/example-post" className="read-more">
         Read More <FaCaretRight size="24px" style={{ marginLeft: 5 }} />
       </Link>
-    </LatestPost>
+    </FeaturedPost>
   );
 };
