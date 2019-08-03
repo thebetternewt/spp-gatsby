@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import FeaturedCardRow from "./FeaturedCardRow";
-import FeatureCard from "./FeatureCard";
 import { FaCaretRight } from "react-icons/fa";
 import { Link } from "gatsby";
+import BlockContent from "@sanity/block-content-to-react";
+
+import FeaturedCardRow from "./FeaturedCardRow";
+import FeatureCard from "./FeatureCard";
 
 const FeaturedPost = styled.div`
   padding: 8rem 1rem 2rem;
@@ -18,6 +20,9 @@ const FeaturedPost = styled.div`
     text-transform: lowercase;
     font-weight: normal;
     text-align: center;
+    opacity: 0.6;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
   }
 
   .date {
@@ -47,36 +52,24 @@ const FeaturedPost = styled.div`
   }
 `;
 
-export default ({ sectionTitle = "Featured Post" }) => {
+export default ({ sectionTitle = "Featured Post", post }) => {
+  console.log("post:", post);
   return (
     <FeaturedPost>
       <h2>{sectionTitle}</h2>
       <FeaturedCardRow>
-        <FeatureCard title="Post Title" />
+        <FeatureCard
+          title="June 19, 2019"
+          imgFluid={post.mainImage.asset.fluid}
+        />
       </FeaturedCardRow>
-      <p className="date">June 21, 2019</p>
+      <p className="date">{post.title}</p>
 
       <div className="snippet">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum ad
-          molestias odit laborum hic quas porro, nihil veritatis tempore magni
-          harum inventore reiciendis deserunt dolor culpa nostrum atque
-          reprehenderit ipsum! Officiis rerum, suscipit maxime voluptate dolor
-          autem voluptatibus enim? Animi, ipsam! Tempora rerum nam quia mollitia
-          reprehenderit consequuntur neque iste!
-        </p>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-          ea architecto eveniet accusamus magnam nihil repudiandae, doloribus
-          consectetur! Vitae, possimus corrupti ab natus repellat, tempore,
-          voluptate nisi reiciendis sapiente hic itaque sequi? In autem nam
-          asperiores reiciendis obcaecati aspernatur, rerum excepturi. Maiores
-          exercitationem esse velit quisquam? Repellendus dignissimos iste
-          voluptatem.
-        </p>
+        <BlockContent blocks={post._rawBody} />
       </div>
 
-      <Link to="/example-post" className="read-more">
+      <Link to={`/blog/${post.slug.current}`} className="read-more">
         Read More <FaCaretRight size="24px" style={{ marginLeft: 5 }} />
       </Link>
     </FeaturedPost>

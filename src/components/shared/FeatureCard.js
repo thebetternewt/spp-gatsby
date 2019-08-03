@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Img from "gatsby-image";
 
 import { GRAY_TEAL } from "../../ui/colors";
 
@@ -19,6 +20,12 @@ const FeatureCard = styled.div`
     background: #ddd;
 
     margin: 1rem 0 4rem;
+
+    .img {
+      min-width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
   }
 
   .label {
@@ -54,15 +61,11 @@ const FeatureCard = styled.div`
   }
 `;
 
-export default ({ title }) => (
+export default ({ title, imgFluid, imgAlt }) => (
   <FeatureCard>
     <div className="img-wrapper">
-      {/* <Img
-          fluid={data.weddings.childImageSharp.fluid}
-          alt="Bride and groom in front of lake"
-          className="img"
-        /> */}
-      <img src="" alt="" />
+      <Img fluid={imgFluid} alt={imgAlt} className="img" />
+      {/* <img src="" alt="" /> */}
       <div className="label">{title}</div>
     </div>
   </FeatureCard>
