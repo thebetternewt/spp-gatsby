@@ -1,17 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
+import { Link } from "gatsby";
 
-const Wrapper = styled.article`
+const LinkWrapper = styled(Link)`
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: flex-start;
+  text-decoration: none;
+  color: inherit;
 
   border-top: 1px solid #eee;
+  cursor: pointer;
 
   &:last-of-type {
     border-bottom: 1px solid #eee;
+  }
+
+  &:hover {
+    background-color: rgba(244, 231, 226, 0.5);
   }
 `;
 
@@ -40,6 +48,7 @@ const ContentWrapper = styled.div`
   .title {
     font-family: "Lora", serif;
     font-size: 1.1rem;
+    line-height: 1.5;
     letter-spacing: 0.1ch;
     font-weight: normal;
     margin: 0 0 5px;
@@ -61,16 +70,16 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const BlogPostWidget = ({ post, img, alt }) => (
-  <Wrapper>
+const BlogPostWidget = ({ post = {}, img, alt, href = "/example-post" }) => (
+  <LinkWrapper to={href}>
     <ThumbImageWrapper>
       <img src={img} alt={alt} className="thumb-image" />
     </ThumbImageWrapper>
     <ContentWrapper>
-      <h3 className="title">A Sample Post Title gsdafsdffff</h3>
-      <p className="date">July 12, 2019</p>
+      <h3 className="title">{post.title || "A Sample Post"}</h3>
+      <p className="date">{post.data || "July 12, 2019"}</p>
     </ContentWrapper>
-  </Wrapper>
+  </LinkWrapper>
 );
 
 export default BlogPostWidget;

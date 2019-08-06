@@ -1,13 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Img from "gatsby-image";
+import { Link } from "gatsby";
 
 import { GRAY_TEAL } from "../../ui/colors";
+
+const BlockLink = styled(Link)`
+  display: block;
+  width: 100%;
+  margin: 0 10px;
+`;
 
 const FeatureCard = styled.div`
   display: flex;
   justify-content: center;
-  /* width: calc(260px + 6rem); */
   max-width: 500px;
   width: 100%;
   margin: 0 10px;
@@ -61,12 +67,22 @@ const FeatureCard = styled.div`
   }
 `;
 
-export default ({ title, imgFluid, imgAlt }) => (
-  <FeatureCard>
-    <div className="img-wrapper">
-      <Img fluid={imgFluid} alt={imgAlt} className="img" />
-      {/* <img src="" alt="" /> */}
-      <div className="label">{title}</div>
-    </div>
-  </FeatureCard>
-);
+export default ({ title, imgFluid, imgAlt, href }) => {
+  const card = (
+    <FeatureCard>
+      <div className="img-wrapper">
+        {imgFluid ? (
+          <Img fluid={imgFluid} alt={imgAlt} className="img" />
+        ) : (
+          <img src="" alt="" />
+        )}
+        <div className="label">{title}</div>
+      </div>
+    </FeatureCard>
+  );
+
+  if (href) {
+    return <BlockLink to="/portraits/motherhood">{card}</BlockLink>;
+  }
+  return card;
+};

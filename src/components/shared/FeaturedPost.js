@@ -60,16 +60,16 @@ export default ({ sectionTitle = "Featured Post", post }) => {
       <FeaturedCardRow>
         <FeatureCard
           title="June 19, 2019"
-          imgFluid={post.mainImage.asset.fluid}
+          imgFluid={post && post.mainImage.asset.fluid}
         />
       </FeaturedCardRow>
-      <p className="date">{post.title}</p>
+      <p className="date">{post && post.title}</p>
 
       <div className="snippet">
-        <BlockContent blocks={post._rawBody} />
+        <BlockContent blocks={post && post._rawBody} />
       </div>
 
-      <Link to={`/blog/${post.slug.current}`} className="read-more">
+      <Link to={`/blog/${post && post.slug.current}`} className="read-more">
         Read More <FaCaretRight size="24px" style={{ marginLeft: 5 }} />
       </Link>
     </FeaturedPost>
